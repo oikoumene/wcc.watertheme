@@ -14,9 +14,9 @@ long_description = (
     open('CHANGES.txt').read()
     + '\n')
 
-setup(name='wcc.theme',
+setup(name='wcc.watertheme',
       version=version,
-      description="WCC Theme",
+      description="wcc.watertheme",
       long_description=long_description,
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -26,7 +26,7 @@ setup(name='wcc.theme',
       keywords='',
       author='Inigo Consulting',
       author_email='team@inigo-tech.com',
-      url='https://github.com/inigoconsulting/wcc.theme',
+      url='https://github.com/inigoconsulting/wcc.watertheme',
       license='gpl',
       packages=find_packages(),
       namespace_packages=['wcc'],

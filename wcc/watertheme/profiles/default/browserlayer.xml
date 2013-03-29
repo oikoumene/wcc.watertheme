@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<layers>
+    <layer name="wcc.watertheme"
+           interface="wcc.watertheme.interfaces.IThemeSpecific" />
+</layers>
+

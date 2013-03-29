@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <object name="portal_skins" allow_any="False" cookie_persistence="False"
    default_skin="Sunburst Theme">
-    <object name="wcc_theme"
+    <object name="wcc_watertheme"
         meta_type="Filesystem Directory View"
-        directory="wcc.theme:skins/wcc_theme"/>
+        directory="wcc.watertheme:skins/wcc_watertheme"/>
     <skin-path name="*">
-        <layer name="wcc_theme"
+        <layer name="wcc_watertheme"
                 insert-after="custom"/>
     </skin-path>
 </object>

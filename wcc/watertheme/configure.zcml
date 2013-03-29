@@ -7,7 +7,7 @@
     xmlns:grok="http://namespaces.zope.org/grok"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:browser="http://namespaces.zope.org/browser"
-    i18n_domain="wcc.theme">
+    i18n_domain="wcc.watertheme">
 
     <includeDependencies package="." />
 
@@ -17,13 +17,13 @@
 
     <genericsetup:registerProfile
         name="default"
-        title="WCC Theme"
+        title="wcc.watertheme"
         directory="profiles/default"
-        description='Extension profile for the "WCC" Plone theme.'
+        description='Extension profile for the "WCC-Water" Plone theme.'
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
-    <cmf:registerDirectory name="wcc_theme"/>
+    <cmf:registerDirectory name="wcc_watertheme"/>
 
     <browser:jbot
         directory="jbot"

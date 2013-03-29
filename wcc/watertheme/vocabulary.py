@@ -7,9 +7,9 @@ from z3c.formwidget.query.interfaces import IQuerySource
 
 
 SCHEMES_CSS={
-    'red': 'wcc-scheme-red.css',
-    'blue': 'wcc-scheme-blue.css',
-    'darkgreen': 'wcc-scheme-darkgreen.css'
+    'red': 'wcc-waterscheme-red.css',
+    'blue': 'wcc-waterscheme-blue.css',
+    'darkgreen': 'wcc-waterscheme-darkgreen.css'
 }
 
 class ColorSchemes(object):
@@ -17,4 +17,4 @@ class ColorSchemes(object):
         return SimpleVocabulary.fromValues(SCHEMES_CSS.keys())
 
 grok.global_utility(ColorSchemes, IVocabularyFactory,
-                name='wcc.theme.colorscheme')
+                name='wcc.watertheme.colorscheme')

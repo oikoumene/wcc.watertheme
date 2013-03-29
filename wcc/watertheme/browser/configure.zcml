@@ -10,7 +10,7 @@
         />
 
     <browser:viewlet
-        name="wcc.theme.css"
+        name="wcc.watertheme.css"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
         permission="zope2.Public"
         template="templates/schememeta.pt"

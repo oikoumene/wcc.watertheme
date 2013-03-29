@@ -2,13 +2,13 @@ from five import grok
 from zope.interface import Interface
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
-from wcc.theme.interfaces import IThemeSettings
-from wcc.theme.vocabulary import SCHEMES_CSS
+from wcc.watertheme.interfaces import IThemeSettings
+from wcc.watertheme.vocabulary import SCHEMES_CSS
 from zope.component.hooks import getSite
 
 class SchemeCSS(grok.View):
     grok.context(Interface)
-    grok.name('wcc-theme-scheme.css')
+    grok.name('wcc-watertheme-scheme.css')
 
     def render(self):
         registry = getUtility(IRegistry)
