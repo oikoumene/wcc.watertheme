@@ -1,0 +1,33 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="wcc.theme">
+
+    <includeDependencies package="." />
+
+    <grok:grok package="." />
+    <plone:static directory="static" type="theme" />
+    <include package=".browser"/>
+
+    <genericsetup:registerProfile
+        name="default"
+        title="WCC Theme"
+        directory="profiles/default"
+        description='Extension profile for the "WCC" Plone theme.'
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <cmf:registerDirectory name="wcc_theme"/>
+
+    <browser:jbot
+        directory="jbot"
+        layer=".interfaces.IThemeSpecific" />
+
+
+</configure>

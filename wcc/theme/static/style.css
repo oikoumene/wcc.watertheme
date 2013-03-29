@@ -1,0 +1,159 @@
+#visual-portal-wrapper {
+    width:1200px;
+    margin:0 auto;
+}
+
+#content-core {
+    font-size:14px;
+}
+
+#content .documentDescription {
+    display:none !important;
+}
+
+ul.navTreeLevel0 {
+    font: bold 18px Corbel, Frutiger, "Frutiger 45", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif /* 18px */;
+}
+
+ul.navTreeLevel2, ul.navTreeLevel3 {
+    padding-left:1em;
+}
+
+dl.portlet ul.navTree li a,
+dl.portlet ul.navTree li a:visited {
+    color: #000;
+}
+
+ul.navTreeLevel1 {
+    font-weight:normal;
+    font-size:12px;
+}
+
+.portletHeader a, .portletHeader a:visited {
+    color:#555 !important;
+    font-weight:normal;
+}
+#portlets-below .portletHeader {
+
+    font-size: 14px;
+    color: #221B1B;
+    font-family: Verdana, Helvetica, Arial, sans-serif; 
+    border-top: none;
+}
+#portlets-below .portletItem a {
+
+    color: rgb(187, 0, 17);
+    font-size: 14px;
+    font-family: Verdana,Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    border-bottom: none;
+}
+#portlets-below .portletItem a:hover {
+
+    text-decoration: underline;
+}
+#portlets-below .portletItem p {
+
+    color: rgb(85, 85 85);
+    font-size: 0.8571em;
+    font-family: Verdana,Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+#portlets-below .cell.BelowPortletManager2{
+
+border:solid 10px #DDD;
+border-width: 0 1px;
+}
+
+.gmnoprint {
+    display:none;
+}
+
+#content-core h3, h4, th, b{
+
+    font-family:Corbel, Frutiger, 'Frutiger 45', 'Lucida Sans Unicode', Verdana, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+.section-front-page #portal-breadcrumbs {
+
+    display: none;
+}
+
+li .contenttype-wcc-churches-region span{
+
+    margin-left: 15px;
+
+}
+
+li .contenttype-wcc-churches-country span {
+
+    margin-left: 25px;
+
+}
+
+li .contenttype-wcc-churches-churchbody span {
+
+    margin-left: 25px;                    
+    
+}
+    
+li .contenttype-wcc-churches-churchmember span{
+
+margin-left: 35px;
+}
+
+div.donate-now-portlet a {
+    font-size: 25px;
+    text-align:center;
+    padding:10px;
+    background: #aaa;
+    display:block;
+}
+
+div.donate-now-portlet a,
+div.donate-now-portlet a:visited,
+div.donate-now-portlet a:link {
+    color:#fff
+}
+
+div#portal-footer-links {
+    text-align:right;
+}
+
+div#portal-footer-links ul li {
+    padding-right: 0.5em;
+}
+
+.portletSearch input[type='text'] {
+    line-height:36px;
+    height:36px;
+    border: 1px solid #ccc;
+    width:160px;
+}
+
+.portletSearch input[type='submit'] {
+    color:transparent;
+    background: url('images/btn-search-grey.png') no-repeat;
+    margin-top:1px;
+    height:38px;
+    width: 54px;
+    border:none;
+    margin-left:-5px;
+}
+
+.portletSearch .portletHeader {
+    font-weight:bold;
+}
+
+#portlets-below .portlet {
+    width:200px;
+    margin:0 auto;
+}
+
+#portlets-below .portletHeader a {
+    font-weight:bold;
+}

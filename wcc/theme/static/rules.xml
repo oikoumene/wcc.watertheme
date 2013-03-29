@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <theme href="index.html" css:if-content="#visual-portal-wrapper"/>
+    <theme href="dialog.html" css:if-content="#content.dialog-wrapper"/>
+    <replace css:theme="title" css:content="title"/>
+    <replace css:theme="link[name='colorscheme']" css:if-content="meta[name='wcc.colorscheme']">
+        <link rel="stylesheet"><xsl:attribute name="href"><xsl:value-of 
+                    select="//meta[@name='wcc.colorscheme']/@content"/></xsl:attribute></link>
+    </replace>
+    <merge theme="/html" content="/html" attributes="lang"/>
+
+    <rules css:if-content="#content.dialog-wrapper">
+        <prepend theme="/html/head" 
+            content="/html/head/base | /html/head/link | /html/head/style | /html/head/script | /html/head/meta" />
+        <replace theme="/html/body" content="/html/body"/>
+        <merge theme="/html/body" content="/html/body" attributes="class"/>
+        <merge theme="/html/body" content="/html/body" attributes="dir"/>
+    </rules>
+
+
+    <rules css:if-content="#visual-portal-wrapper" >
+        <drop css:theme="#portal-column-content" attributes="class" 
+            css:if-not-content="#portal-column-two"/>
+        <drop css:theme="#portal-column-two" css:if-not-content="#portal-column-two"/>
+        <drop css:theme="#portal-column-main" attributes="class"
+            css:if-not-content="#portal-column-one"/>
+        <drop css:theme="#portal-column-one" css:if-not-content="#portal-column-one"/>
+
+        <prepend theme="/html/head"
+            content="/html/head/base | /html/head/link | /html/head/style | /html/head/script | /html/head/meta" />
+        <merge theme="/html/body" content="/html/body" attributes="class"/>
+        <merge theme="/html/body" content="/html/body" attributes="dir"/>
+        <replace css:content=".portletSearch .searchButton">
+            <input class="searchButton" type="submit" value=" "/>
+        </replace>
+        <replace css:theme="#portal-globalnav" css:content="#portal-globalnav"/>
+        <replace css:theme-children="#portal-footer-links > ul" css:content-children="#portal-siteactions"/>
+        <replace css:theme="#site-analytics" css:content="#plone-analytics"/>
+        <replace css:theme="#portal-personaltools-wrapper" 
+            css:content="#portal-personaltools-wrapper"/>
+        <replace css:theme="#portal-languageselector" css:content="#portal-languageselector"/>
+        <replace css:theme-children="#portal-column-content" 
+                 css:content-children="#portal-column-content"/>
+        <replace css:theme-children="#portal-column-one" 
+                css:content-children="#portal-column-one"
+                css:if-content="#portal-column-one"/>
+        <replace css:theme-children="#portal-column-two" 
+                css:content-children="#portal-column-two"
+                css:if-content="#portal-column-two"/>
+        <replace css:theme="#portal-logo" css:content="#portal-logo"/>
+    </rules>
+
+
+    <rules css:if-content=".section-front-page.template-document_view">
+        <replace css:content="#content">
+            <div class="visualClear"></div>
+        </replace>
+        <replace css:content="#portlets-below">
+            <div id="portlets-below">
+                <div class="BelowPortletManager1">
+                    <xsl:copy-of css:select=".BelowPortletManager1 > *"/>
+                    <div class="visualClear"></div>
+                </div>
+                <div class="row">
+                    <div class="BelowPortletManager2 cell width-2:3 position-0">
+                        <xsl:copy-of css:select=".BelowPortletManager2 > *"/>
+                    </div>
+                    <div class="BelowPortletManager3 cell width-1:3 position-2:3">
+                        <xsl:copy-of css:select=".BelowPortletManager3 > *"/>
+                    </div>
+                </div>
+            </div>
+        </replace>
+    </rules>
+</rules>

@@ -1,0 +1,43 @@
+#visual-portal-wrapper {
+    border-top: 8px solid #0534B6;
+}
+
+a:link, a:visited {
+    color: #0534B6;
+}
+
+a.navTreeCurrentItem, a.navTreeCurrentItem:visited {
+    color: #0534B6 !important;
+}
+
+#content a:link, dl.portlet a:link {
+    color: #0534B6;
+    border-bottom: 0.1em solid #032173;
+}
+
+#content a:visited, dl.portlet a:visited {
+    color: #0534B6;
+    border-bottom: 0.1em solid #032173;
+}
+
+#content a:hover, dl.portlet a:hover {
+    color: #0534B6 !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
+}
+
+#portal-globalnav, #portal-globalnav li a {
+    background:#0534B6 !important;  
+    color: #FFFFFF !important;
+}
+
+#portal-personaltools dd a:hover {
+    background:#0534B6 !important;
+    color: #FFFFFF !important;
+}
+
+div.donate-now-portlet a {
+    background: #0534B6 !important;
+}
+
+#portlets-below a, #portlets-below .portletHeader {
+    color: #0534B6 !important;
+}
